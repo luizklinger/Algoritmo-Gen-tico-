@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algoritmo genético: projetos do campus</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Projetos do campus com orçamento limitado</h1>
+  <p>Simulador de algoritmo genético · Inteligência Artificial · UFPI 2026.2 ·
+    <a id="repo" href="https://github.com/luizklinger/Algoritmo-Genetico-">Código no GitHub</a></p>
+</header>
+<main>
+  <section class="panel" id="data">
+    <h2>Projetos</h2>
+    <table><thead><tr><th>Gene</th><th>Nome</th><th>Custo (R$)</th><th>Benefício (pontos)</th><th></th></tr></thead><tbody id="rows"></tbody></table>
+    <button type="button" id="add" class="sm">Adicionar projeto</button>
+    <span class="hint">Entre 4 e 15 projetos.</span>
+  </section>
+  <section class="panel" id="paramsPanel">
+    <h2>Parâmetros</h2>
+    <div id="params"></div>
+  </section>
+  <section class="panel" id="controls">
+    <div class="btns">
+      <button id="run">Executar</button><button id="pause">Pausar</button>
+      <button id="step">Avançar uma geração</button><button id="reset" class="primary">Reiniciar</button>
+    </div>
+    <p id="msg" role="status"></p>
+  </section>
+  <section class="stats">
+    <div><span>Geração</span><b id="sGen">0</b></div>
+    <div><span>Melhor aptidão da geração</span><b id="sBest">0</b></div>
+    <div><span>Aptidão média</span><b id="sAvg">0</b></div>
+    <div><span>Melhor acumulado</span><b id="sAcc">0</b></div>
+  </section>
+  <section class="panel" id="solution"></section>
+  <section class="panel">
+    <h2>Evolução</h2>
+    <canvas id="chart" width="720" height="240"></canvas>
+    <p class="legend"><i style="background:#1a7f37"></i>melhor acumulado <i style="background:#2358c4"></i>melhor da geração <i style="background:#c2352b"></i>média</p>
+  </section>
+  <section class="panel">
+    <h2>Operações da última geração</h2>
+    <div class="btns"><select id="pairSel" aria-label="Par de pais"></select><button id="anim" class="sm">Animar par</button></div>
+    <div id="stage"></div><p id="cap" class="hint"></p>
+  </section>
+  <section class="panel"><h2>Log das etapas</h2><div id="log" tabindex="0"></div></section>
+  <section class="panel"><h2>Histórico por geração</h2>
+    <div class="scroll"><table><thead><tr><th>Geração</th><th>Melhor da geração</th><th>Média</th><th>Melhor acumulado</th></tr></thead><tbody id="hist"></tbody></table></div>
+  </section>
+</main>
+<script src="ga.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
