@@ -27,7 +27,6 @@ style.css       estilos
 ga.js        motor do algoritmo (sem dependências; roda também no Node)
 app.js       interface, validação, controles, gráfico e animação
 tests.js  testes da seção 6 (node tests/tests.js)
-RESULTADOS.md  saída dos testes
 ```
 
 ## Instruções de uso
